@@ -93,7 +93,7 @@
 
 .menu-categorias .current-menu-item a,
 .menu-categorias ul li a:hover {
-  color: orange;
+  color: orangered;
 }
 
 @media (max-width: 800px) {
