@@ -1,0 +1,42 @@
+/* Lista de produtos */
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.products-list h2 {
+  margin-top: 5px;
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.products-list a {
+  display: grid;
+}
+
+.product-info {
+  grid-area: 1/1;
+}
+
+.product-item a:hover .product-overlay {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.product-overlay {
+  opacity: 0;
+  grid-area: 1/1;
+  background: rgba(0, 0, 0, .3);
+  display: flex;
+  transition: opacity .3s;
+}
+
+.product-overlay .btn-link {
+  margin: auto;
+  background: rgba(255, 255, 255, .9);
+  width: 100%;
+  padding: 20px;
+}

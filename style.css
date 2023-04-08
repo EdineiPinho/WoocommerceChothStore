@@ -1,0 +1,10 @@
+/* 
+Theme name: Hendal
+*/
+
+@import './css/base.css';
+@import './css/header.css';
+@import './css/slide.css';
+@import './css/page-home.css';
+@import './css/products.css';
+@import './css/footer.css';

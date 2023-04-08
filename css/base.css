@@ -1,0 +1,113 @@
+*::-webkit-scrollbar {
+  width: .85rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(26, 31, 33, .1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(115, 127, 133, .1);
+  border-radius: 5px;
+  border: 1px solid rgba(26, 31, 33, .2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-link {
+  padding: 15px;
+  background: #fff;
+  max-width: 200px;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+
+.btn-link:hover {
+  color: orangered;
+  border-color: orangered;
+}
+
+.btn-link::after {
+  content: '';
+  display: block;
+  background: url('../img/icons/arrow.svg') no-repeat center center;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.product-info h2 {
+  margin: 12px 0;
+}
+
+.subtitulo {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Roboto, Arial, Helvetica, sans-serif !important;
+  font-size: 2.375rem;
+  margin-bottom: 45px;
+}
+
+.subtitulo::before,
+.subtitulo::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 6px;
+  background: currentColor;
+  transform: skew(-20deg);
+}
+
+.subtitulo::before {
+  margin: 0 calc(50% + 20px) 0 auto;
+}
+
+.subtitulo::after {
+  margin: 0 calc(50% - 120px) 0 auto;
+}
