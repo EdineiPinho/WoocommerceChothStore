@@ -1,5 +1,5 @@
 <footer class="footer">
-  <a href="/"><img src="<?php echo get_stylesheet_directory_uri();?>/img/handel-white.svg" alt="Hendal Logo" /></a>
+  <a href="/"><img src="<?= get_stylesheet_directory_uri();?>/img/handel-white.svg" alt="Hendal Logo" /></a>
   <div class="container footer-info">
     <section>
       <h3>Páginas</h3>
@@ -28,7 +28,7 @@
   ?>
 
 
-  <small class="footer-copy">&copy;Hendal <?php echo date('Y');?> - Todos os direitos reservados.<address><?php echo $complete_address;?></address> </small>
+  <small class="footer-copy">&copy;Hendal <?= date('Y');?> - Todos os direitos reservados.<address><?= $complete_address;?></address> </small>
 </footer>
 <?php wp_footer(); ?>
 <script src=" <?= get_stylesheet_directory_uri(); ?>/js/slide.js"></script>

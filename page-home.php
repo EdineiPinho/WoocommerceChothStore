@@ -1,21 +1,6 @@
 <?php
 // Template name: Home
-get_header(); ?>
-
-<?php
-function format_products($products, $img_size)
-{
-  $products_final = [];
-  foreach ($products as $product) {
-    $products_final[] = [
-      'name' => $product->get_name(),
-      'preco' => $product->get_price_html(),
-      'link' => $product->get_permalink(),
-      'img' => wp_get_attachment_image_src($product->get_image_id(), $img_size)[0],
-    ];
-  }
-  return $products_final;
-}
+get_header(); 
 $products_slide = wc_get_products([
   'limit' => 6,
   'tag' => ['slide'],
@@ -34,15 +19,12 @@ $products_sales = wc_get_products([
 $home_id = get_the_ID();
 $categoria_esquerda = get_post_meta($home_id, 'categoria_esquerda', true);
 $categoria_direita = get_post_meta($home_id, 'categoria_direita', true);
-
 $data = [];
 $data['slide'] = format_products($products_slide, 'Slide');
 $data['lancamentos'] = format_products($products_new, 'medium');
 $data['vendas'] = format_products($products_sales, 'medium');
 $data['categorias'][$categoria_esquerda] = get_product_category_data($categoria_esquerda);
 $data['categorias'][$categoria_direita] = get_product_category_data($categoria_direita);
-
-
 
 function get_product_category_data($category){
   $cat = get_term_by('slug', $category, 'product_cat');
@@ -55,18 +37,14 @@ function get_product_category_data($category){
     'img' => wp_get_attachment_image_src($img_id, 'slide')[0]
   ];
 }
-
-?>
-<?php if (have_posts()) {
+if (have_posts()) {
   while (have_posts()) {
     the_post(); ?>
-
 <ul class="vantagens">
   <li>Frete Grátis</li>
   <li>Troca Fácil</li>
   <li>12x Sem Juros</li>
 </ul>
-
 <section class="slide-wrapper">
   <ul class="slide">
     <?php foreach ($data['slide'] as $product) { ?>
@@ -81,28 +59,22 @@ function get_product_category_data($category){
     <?php } ?>
   </ul>
 </section>
-
 <section class="container">
   <h1 class="subtitulo">Lançamentos</h1>
   <?php hendal_product_list($data['lancamentos']); ?>
 </section>
-
-<section class="categorias-home">
-  <?php foreach( $data['categorias'] as $categoria ){ ?>
-  <a href="<?= $categoria['link'];?>">
-    <img src="<?= $categoria['img'];?>" alt="<?= $categoria['name'];?>" />
-    <span class="btn-link"><?= $categoria['name'];?></span>
-  </a>
-  <?php } ?>
+<section class="container cat-home">
+  <div class="categorias-home">
+    <?php foreach( $data['categorias'] as $categoria ){ ?>
+    <a href="<?= $categoria['link'];?>">
+      <img src="<?= $categoria['img'];?>" alt="<?= $categoria['name'];?>" />
+      <span class="btn-link"><?= $categoria['name'];?></span>
+    </a>
+    <?php } ?>
+  </div>
 </section>
-
 <section class="container">
   <h1 class="subtitulo">Mais Vendidos</h1>
   <?php hendal_product_list($data['vendas']); ?>
 </section>
-
-
-<?php }
-} ?>
-
-<?php get_footer(); ?>
+<?php }} get_footer(); ?>
