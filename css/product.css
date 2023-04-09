@@ -40,6 +40,7 @@
 }
 
 .product-detail h1 {
+  font-family: 'Roboto', sans-serif !important;
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 40px;
@@ -114,6 +115,10 @@
 
 .product-detail .reset_variations {
   display: none !important;
+}
+
+.notificacao {
+  margin: 20px auto;
 }
 
 @media (max-width: 800px) {

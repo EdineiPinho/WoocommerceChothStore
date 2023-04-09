@@ -1,0 +1,99 @@
+/* GERAL */
+.woocommerce a {
+  text-decoration: underline;
+}
+
+.woocommerce-breadcrumb a:hover {
+  color: orangered;
+}
+
+.woocommerce a:hover,
+.woocommerce .wp-element-button:hover,
+.woocommerce .qty:focus,
+.woocommerce .input-text:focus {
+  color: orangered !important;
+  border-color: orangered !important;
+}
+
+/* NOTIFICAÇÕES */
+
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+  border: none;
+  background: #eee;
+  color: #000;
+  padding: 15px 20px;
+  padding-left: 60px;
+}
+
+.woocommerce-message a:hover {
+  color: orangered;
+}
+
+.woocommerce-message {
+  border-left: 4px solid olivedrab;
+}
+
+.woocommerce-info {
+  border-left: 4px solid darkgoldenrod;
+}
+
+.woocommerce-error {
+  border-left: 4px solid red;
+}
+
+/* FORMULÁRIOS */
+
+.woocommerce .input-text {
+  font-size: 1.125rem !important;
+  border: 1px solid rgba(0, 0, 0, .1) !important;
+  background: rgba(0, 0, 0, .03) !important;
+  padding: 10px 15px !important;
+  border-radius: 4px !important;
+}
+
+.woocommerce .input-text:hover {
+  border-color: orangered !important;
+}
+
+.woocommerce form .form-row {
+  padding: 3px 0 !important;
+}
+
+.woocommerce button.button {
+  background: #000 !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  text-transform: capitalize;
+  min-height: 43px;
+}
+
+/* CARRINHO */
+
+.woocommerce #coupon_code {
+  min-width: 180px;
+  margin-right: 10px;
+}
+
+.woocommerce-cart a.checkout-button.button.alt.wp-element-button {
+  text-transform: capitalize;
+  font-weight: 500;
+  background: #0066bb;
+  color: white;
+}
+
+.woocommerce-cart a.checkout-button.button.alt.wp-element-button:hover {
+  background: #1188ee;
+  color: white !important;
+}
+
+.woocommerce-cart .cart_totals h2 {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.woocommerce table.shop_table.shop_table_responsive {
+  border-radius: 0;
+}
