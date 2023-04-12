@@ -10,7 +10,7 @@ function hendal_custom_menu($menu_links){
   
   return $menu_links;
 }
-add_filter( 'woocommerce_acctount_menu_items', 'hendal_custom_menu' );
+add_filter( 'woocommerce_account_menu_items', 'hendal_custom_menu' );
 
 function hendal_add_endpoint(){
   add_rewrite_endpoint('certificados', EP_PAGES);
@@ -18,10 +18,9 @@ function hendal_add_endpoint(){
 add_action('init', 'hendal_add_endpoint');
 
 function hendal_certificados() {
-  echo "<p>Esses são so seus certificados</p>";
+  echo "<p>Esses são os seus certificados</p>";
 }
 
 add_action('woocommerce_account_certificados_endpoint', 'hendal_certificados');
-
 
 ?>
