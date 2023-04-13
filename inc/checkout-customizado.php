@@ -2,6 +2,8 @@
 
 function hendal_custom_checkout($fields){
 
+  // unset($fields['billing']['billing_presente']);
+
   $fields['billing']['billing_presente'] = [
     'label' => 'Embrulhar para presente?',
     'required' => false,
